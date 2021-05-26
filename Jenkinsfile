@@ -12,6 +12,7 @@ node('master'){
 	}
 }
 	stage('Pull-image-server'){
+		sh "whoami && echo $PATH"
 		sh "/usr/local/bin/docker-compose down"
 		sh "/usr/local/bin/docker-compose up -d"
 }
