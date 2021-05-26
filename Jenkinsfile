@@ -4,7 +4,7 @@ node('master'){
 		checkout scm
 }
 	stage('Build-and-Tag'){
-		app = docker.build('strukt93/snake')
+		app = docker.build('strukt93/snake:test')
 }
 	stage('Post-to-dockerhub'){
 		docker.withRegistry('https://registry.hub.docker.com', 'dockerhub'){
