@@ -1,8 +1,8 @@
 node('master'){
 	def app
 	stage('Cloning Git'){
-		PATH = "$PATH:/var"
-		sh "echo $PATH"
+		sh "curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /tmp/docker-compose"
+		sh "/tmp/docker-compose"
 		//checkout scm
 }/*
 	stage('Build-and-Tag'){
