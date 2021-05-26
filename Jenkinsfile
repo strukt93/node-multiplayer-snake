@@ -1,4 +1,4 @@
-node('master'){
+node('AppServer-Agent'){
 	def app
 	stage('Cloning Git'){
 		checkout scm
@@ -12,9 +12,7 @@ node('master'){
 	}
 }
 	stage('Pull-image-server'){
-		sh "curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /tmp/docker-compose"
-		sh "chmod +x /tmp/docker-compose"
-		sh "/tmp/docker-compose down"
-		sh "/tmp/docker-compose up -d"
+		sh "docker-compose down"
+		sh "docker-compose up -d"
 }
 }
