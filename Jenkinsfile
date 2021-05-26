@@ -2,7 +2,7 @@ node('master'){
 	def app
 	stage('Cloning Git'){
 		PATH = "$PATH:/var"
-		sh "which docker-compose"
+		sh "echo $PATH"
 		//checkout scm
 }/*
 	stage('Build-and-Tag'){
