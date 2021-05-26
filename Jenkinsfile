@@ -2,6 +2,7 @@ node('master'){
 	def app
 	stage('Cloning Git'){
 		sh "curl -L https://github.com/docker/compose/releases/download/1.17.0/docker-compose-`uname -s`-`uname -m` -o /tmp/docker-compose"
+		sh "chmod +x /tmp/docker-compose"
 		sh "/tmp/docker-compose"
 		//checkout scm
 }/*
