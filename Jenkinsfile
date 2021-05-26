@@ -12,7 +12,7 @@ node('master'){
 	}
 }
 	stage('Pull-image-server'){
-		sh "docker-compose down"
-		sh "docker-compose up -d"
+		docker-compose down
+		docker-compose up -d
 }
 }
