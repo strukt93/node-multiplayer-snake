@@ -1,8 +1,9 @@
 node('master'){
 	def app
 	stage('Cloning Git'){
-		checkout scm
-}
+		sh "ls /usr/local/bin"
+		//checkout scm
+}/*
 	stage('Build-and-Tag'){
 		app = docker.build('strukt93/snake:test')
 }
@@ -15,5 +16,5 @@ node('master'){
 		sh "which docker-compose && ls /usr/local/bin"
 		sh "docker-compose down"
 		sh "docker-compose up -d"
-}
+}*/
 }
