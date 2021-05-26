@@ -10,8 +10,7 @@ node('master'){
 	stage('Post-to-dockerhub'){
 		sh "echo Post-to-Dockerhub"
 		/*docker.withRegistry('https://registry.hub.docker.com', 'dockerhub'){
-			app.push('test')*/
-}
+			app.push('test')}*/
 }
 	stage('Pull-image-server'){
 		sh "Pull-image-server"
